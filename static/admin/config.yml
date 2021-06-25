@@ -19,7 +19,7 @@ collections:
       - { label: 'Name', name: 'title', widget: 'string'}
       - { label: 'Introduction', name: 'introduction', widget: 'string' }
       - { label: 'Cover Image', name: 'thumbnail', widget: 'image'}
-      - label: "Portfolio & Social media link"
+      - label: "Portfolio & Social media links"
         hint: "Seperate each item with a comma"
         name: "links"
         widget: "list"

@@ -1,54 +1,50 @@
 import * as React from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import * as styles from './index.module.sass'
 
 const IndexPage = ({ data }) => {
 
   const designers = data.allMarkdownRemark.edges
 
   return (
-    <>
+    <main className={styles.container}>
+
+      <figure className={`${styles.siteIntro} ${styles.info}`} >
+        <hgroup>
+          <h1>Rave Graphics / UX-UI 2021</h1>
+        </hgroup>
+      </figure>
+
+      <figure className={`${styles.showInfo} ${styles.info}`}>
+        <hgroup>
+          <h1>Rave Graphics / UX-UI 2021</h1>
+        </hgroup>
+      </figure>
+
       {designers.map(({ node }, i) => {
-        const { title, introduction, projects } = node.frontmatter;
-        console.log({ node })
+
+        const imgs = node.frontmatter.projects.map(proj => { return { image: proj.images[0].src, title: proj.title } }).flat();
+
         return (
 
-          <div key={node.id}>
-            <h1>
-              {title}
-            </h1>
-            <p>
-              {introduction}
-            </p>
+          imgs.map(({ title, image }, i) => {
+            return (
+              <Link
+                to={`${node.fields.slug}#${title}`} key={node.id}
+              >
+                <GatsbyImage
+                  key={`${node.id}-${i}`}
+                  className={styles.image}
+                  image={getImage(image)}
+                />
+              </Link>
+            )
+          })
 
-            <div className="projects">
-
-              {projects.map(project => {
-
-                return (
-                  <div key={`${project.title}-${project.description}`}>
-                    <h2>{project.title}</h2>
-                    <p>{project.description}</p>
-                    <div className="images">
-                      {project.images.map(image => {
-                        const src = getImage(image.src)
-                        return (
-                          <GatsbyImage image={src} />
-                        )
-                      })}
-                    </div>
-                  </div>
-
-                )
-              })}
-
-            </div>
-            <hr />
-          </div>
         )
       })}
-    </>
+    </main>
   )
 }
 
@@ -62,17 +58,13 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            title
-            links
-            introduction
             projects {
-              description
               title
               images {
                 src {
                   childImageSharp {
                     gatsbyImageData(
-                      width: 200
+                      width: 400
                       placeholder: BLURRED
                       formats: [AUTO, WEBP, AVIF]
                     )
