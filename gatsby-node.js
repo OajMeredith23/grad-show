@@ -3,10 +3,6 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images-v2');
 
-// exports.onCreateNode = ({ node }) => {
-//   fmImagesToRelative(node);
-// };
-
 exports.onCreateNode = ({ node }) => {
   console.log(`Node created of type "${node.internal.type}"`)
 }
@@ -39,6 +35,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
@@ -54,6 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,

@@ -16,7 +16,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Name', name: 'name', widget: 'string'}
+      - { label: 'Name', name: 'title', widget: 'string'}
       - { label: 'Introduction', name: 'introduction', widget: 'markdown' }
       - { label: 'Cover Image', name: 'thumbnail', widget: 'image'}
       - { label: 'Color', name: 'color', widget: 'color', required: false}
