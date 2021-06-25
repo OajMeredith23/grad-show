@@ -4,7 +4,7 @@ introduction: This is the description of the guy who developed this website.
 thumbnail: gnomonic-map.png
 links:
   - olivermeredith.com
-project:
+projects:
   - images:
       - src: gnomonic-map.png
       - src: owl-logo.png

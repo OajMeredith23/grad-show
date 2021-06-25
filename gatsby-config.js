@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "work",
-        path: "./content/work",
+        name: "designers",
+        path: "./content/designers",
       },
       __key: "work",
     },

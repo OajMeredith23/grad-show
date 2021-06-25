@@ -8,53 +8,23 @@ export default ({ data }) => {
   const post = data.markdownRemark
   const {
     title,
-    description,
-    brief,
-    solution,
-    thumbnail,
-    videoSrcURL,
-    color,
-    links
+    introduction,
   } = post.frontmatter
 
-  const image = getImage(thumbnail)
 
   return (
     <>
       <Helmet title={title} defer={false}>
-        <title>Oliver Meredith | {title}</title>
-        <meta name="description" content={description} />
+        <title>{title}</title>
+        <meta name="description" content={introduction} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={title} />
         <meta property="og:type" content="website" />
-        {/* <meta property="og:image" content={thumbnail.publicURL} /> */}
       </Helmet>
 
+      <h1>{title}</h1>
+      <p>{introduction}</p>
 
-      <div>
-        <div className="cover-image">
-          <GatsbyImage image={image} alt={title} />
-        </div>
-
-        {(brief || solution) &&
-          <figure className="brief-and-solution">
-            {brief &&
-              <div className="text-section brief">
-                <h1>Brief</h1>
-                <p dangerouslySetInnerHTML={{ __html: brief }}></p>
-              </div>
-            }
-            {solution &&
-              <div className="text-section solution">
-                <h1>Solution</h1>
-                <p dangerouslySetInnerHTML={{ __html: solution }}></p>
-              </div>
-            }
-          </figure>
-        }
-
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-      </div>
     </ >
   )
 }
@@ -65,21 +35,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        description
-        color
-        links
-        brief
-        solution
-        thumbnail{
-            childImageSharp {
-                gatsbyImageData(
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-                )
-            }
-                publicURL
-        }
-        videoSrcURL
+        introduction
       }
     }
   }

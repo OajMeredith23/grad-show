@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet'
 import favicon from '../images/icon.png'
 
 
-const title = "Oliver Meredith | Front-end developer & user-experience designer"
-const description = "A front-end developer that builds upon a foundation in design. Creator of interesting, exciting digital experiences that build upon an education in UI/UX Design and 5 years experience using a variety of different web technologies."
+const title = "Graphic Design/UX-UI Ravensbourne Degree Show"
+const description = ""
 
 const Layout = ({ children, location }) => {
 

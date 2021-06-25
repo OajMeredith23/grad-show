@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  open_authoring: true
 
 media_folder: '/static/media'
 public_folder: '/media'
@@ -17,21 +18,23 @@ collections:
       preview: false
     fields:
       - { label: 'Name', name: 'title', widget: 'string'}
-      - { label: 'Introduction', name: 'introduction', widget: 'markdown' }
+      - { label: 'Introduction', name: 'introduction', widget: 'string' }
       - { label: 'Cover Image', name: 'thumbnail', widget: 'image'}
-      - { label: 'Color', name: 'color', widget: 'color', required: false}
-      - label: "Links"
+      - label: "Portfolio & Social media link"
+        hint: "Seperate each item with a comma"
         name: "links"
         widget: "list"
         default: [""]
       - label: "Projects"
-        name: "project"
+        name: "projects"
         widget: "list"
         required: false
         fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Title", name: "title", widget: "string"}
           - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Video", name: "video", widget: "string", hint: 'Must be Vimeo or YouTube URL', required: false }
           - label: "Images"
+            hint: "All images should be below 750kb"
             name: "images"
             widget: "list"
             fields:
