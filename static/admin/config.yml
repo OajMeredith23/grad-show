@@ -2,51 +2,37 @@ backend:
   name: git-gateway
   branch: main
 
-publish_mode: editorial_workflow
-
 media_folder: '/static/media'
 public_folder: '/media'
 
-display_url: https://olivermeredith-2.netlify.app
-
 collections:
-  - name: 'work'
+  - name: 'designers'
     media_folder: ''
     public_folder: ''
-    label: 'Work'
-    folder: 'content/work'
+    label: 'Designers'
+    folder: 'content/designers'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - label: "Images"
-        name: "galleryImages"
-        widget: "list"
-        required: false
-        fields:
-          - { label: "Image", name: "src", widget: "image" }
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Description", name: "description", widget: "string", required: false }
-      - label: "Order"
-        name: "order"
-        widget: "number"
-        default: 2
-        value_type: "int"
-        min: 1
-        max: 101
-        step: 1
+      - { label: 'Name', name: 'name', widget: 'string'}
+      - { label: 'Introduction', name: 'introduction', widget: 'markdown' }
+      - { label: 'Cover Image', name: 'thumbnail', widget: 'image'}
+      - { label: 'Color', name: 'color', widget: 'color', required: false}
       - label: "Links"
         name: "links"
         widget: "list"
         default: [""]
-      - { label: 'Category', name: 'category', widget: 'hidden' , default: 'work'}
-      - { label: 'Title', name: 'title', widget: 'string'}
-      - { label: 'Publish Date', name: 'date', widget: 'datetime'}
-      - { label: 'Description', name: 'description', widget: 'markdown' }
-      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image'}
-      - { label: 'videoSrcURL', name: 'videoSrcURL', widget: 'string', hint: 'The embed link, not the default share link', required: false}
-      - { label: 'Color', name: 'color', widget: 'color', required: false}
-      - { label: 'Brief', name: 'brief', widget: 'markdown', required: false}
-      - { label: 'Solution', name: 'solution', widget: 'markdown', required: false}
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false}
+      - label: "Projects"
+        name: "project"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }

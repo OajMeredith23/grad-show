@@ -2,10 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Helmet } from 'react-helmet'
-import styled from 'styled-components';
-import SeeMoreWork from '../components/SeeMoreWork'
-import Landing from '../components/Landing'
-import Video from '../components/Elements/Video'
+
 export default ({ data }) => {
 
   const post = data.markdownRemark
@@ -19,7 +16,6 @@ export default ({ data }) => {
     color,
     links
   } = post.frontmatter
-  console.log({ thumbnail })
 
   const image = getImage(thumbnail)
 
@@ -34,14 +30,8 @@ export default ({ data }) => {
         {/* <meta property="og:image" content={thumbnail.publicURL} /> */}
       </Helmet>
 
-      <Landing
-        title={title}
-        description={description}
-        links={links}
-        color={color}
-      ></Landing>
 
-      <Container>
+      <div>
         <div className="cover-image">
           <GatsbyImage image={image} alt={title} />
         </div>
@@ -62,79 +52,13 @@ export default ({ data }) => {
             }
           </figure>
         }
-        {videoSrcURL !== null &&
-          <div className="video">
-            <Video
-              title={title}
-              videoSrcURL={videoSrcURL}
-            />
-          </div>
-        }
-        <Content dangerouslySetInnerHTML={{ __html: post.html }}></Content>
-        <SeeMoreWork currTitle={title} />
-      </Container>
+
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </div>
     </ >
   )
 }
 
-const Container = styled.div`
-  .cover-image .gatsby-image-wrapper {
-    width: 100%;
-    height: 100%;
-    picture, img {
-      object-fit: contain;
-    }
-  }
-  .brief-and-solution{
-    display: flex; 
-    flex-wrap: wrap;
-    margin: 2em 0 4em 0;
-    .text-section{
-      flex: 1 1 450px;
-    }
-  }
-
-  .text-section{
-    margin: 1em;
-    max-width: 65ch;
-    @media(min-width: 600px){
-      p {
-        font-size: 140%;
-      }
-    }
-  }
-  .video{
-    margin-top: 1em;
-    padding-bottom: 56.25%;
-    position: relative;
-    iframe{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-`
-const Content = styled.div`
-  img {
-    display: inline-block;
-    width: calc(100% + 2em);
-    margin: 1em -1em;
-  }
-
-  p {
-    margin: 1em -1em;
-  }
-  padding: 0 1em;
-  h1,h2{
-    margin-top: 1em;
-  }
-
-  ul, ol {
-    max-width: 65ch;
-  }
-`
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
