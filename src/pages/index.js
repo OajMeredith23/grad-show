@@ -21,7 +21,9 @@ const IndexPage = ({ data }) => {
             <p>
               {introduction}
             </p>
+
             <div className="projects">
+
               {projects.map(project => {
 
                 return (
@@ -40,6 +42,7 @@ const IndexPage = ({ data }) => {
 
                 )
               })}
+
             </div>
             <hr />
           </div>
