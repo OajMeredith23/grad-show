@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Helmet } from 'react-helmet'
 
-export default ({ data }) => {
+export default function Posts({ data }) {
 
   const post = data.markdownRemark
   const {

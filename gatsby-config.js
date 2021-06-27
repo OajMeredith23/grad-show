@@ -61,8 +61,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `cormorant garamond\:300, 300i`,
-          `poppins\:300,400,400i,700` // you can also specify font weights and styles
+          `IBM plex sans\:300, 500, 700, 900`,
         ],
         display: 'swap'
       }

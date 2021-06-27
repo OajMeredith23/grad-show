@@ -1,5 +1,6 @@
 import React from 'react'
 
+const b = 'a'
 const About = () => {
 
     return (

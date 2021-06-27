@@ -18,7 +18,7 @@ collections:
     fields:
       - { label: 'Name', name: 'title', widget: 'string'}
       - { label: 'Introduction', name: 'introduction', widget: 'string' }
-      - { label: 'Cover Image', name: 'thumbnail', widget: 'image'}
+      - { label: 'Profile Image', name: 'thumbnail', widget: 'image'}
       - label: "Portfolio & Social media links"
         hint: "Seperate each item with a comma"
         name: "links"
@@ -27,7 +27,6 @@ collections:
       - label: "Projects"
         name: "projects"
         widget: "list"
-        required: false
         fields:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Description", name: "description", widget: "string", required: false }

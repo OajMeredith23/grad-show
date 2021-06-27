@@ -1,81 +1,68 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from './index.module.sass'
+import _ from 'lodash'
+import { styled } from "@material-ui/core"
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
 
-  const designers = data.allMarkdownRemark.edges
 
+  const [backgroundPartToMove, setBackgroundPartToMove] = useState(null);
+  const angles = [0, 90, 180, 270]
+
+  useEffect(() => {
+    const pickRandomBackgroundPartToMove = setInterval(() => {
+      setBackgroundPartToMove(Math.round(Math.random() * 4))
+    }, 1000);
+
+
+    return () => clearInterval(pickRandomBackgroundPartToMove);
+  }, [])
   return (
     <main className={styles.container}>
 
-      <figure className={`${styles.siteIntro} ${styles.info}`} >
+      <div className={styles.backgroundAnimation}>
+        <div>
+          {[0, 1, 2, 3].map((part, i) => <span style={{
+            transform: `rotate(${i === backgroundPartToMove && angles[Math.round(Math.random() * 3)]}deg)`
+          }}></span>)}
+        </div>
+      </div>
+
+      <figure className={styles.showInfo}>
         <hgroup>
-          <h1>Rave Graphics / UX-UI 2021</h1>
+          <h1><strong>Degree Show</strong></h1>
+          <h1>GRAPHIC DESIGN & UX/UI</h1>
+          <h3>
+            8th and 9th july 2021
+          </h3>
+          <h3>
+            Holborn, London
+          </h3>
         </hgroup>
       </figure>
 
-      <figure className={`${styles.showInfo} ${styles.info}`}>
-        <hgroup>
-          <h1>Rave Graphics / UX-UI 2021</h1>
-        </hgroup>
+
+      <figure className={styles.tickets}>
+        <a href="" className={styles.ticketsBtn}>
+          <h3>GET YOUR TICKETS</h3>
+        </a>
+        <div className={styles.comingSoon}>
+          <h3>
+            <strong>
+              COMING SOON
+            </strong>
+          </h3>
+          <h3>
+            RAVENSBOURNE UNIVERSITY
+          </h3>
+        </div>
       </figure>
 
-      {designers.map(({ node }, i) => {
 
-        const imgs = node.frontmatter.projects.map(proj => { return { image: proj.images[0].src, title: proj.title } }).flat();
-
-        return (
-
-          imgs.map(({ title, image }, i) => {
-            return (
-              <Link
-                to={`${node.fields.slug}#${title}`} key={node.id}
-              >
-                <GatsbyImage
-                  key={`${node.id}-${i}`}
-                  className={styles.image}
-                  image={getImage(image)}
-                />
-              </Link>
-            )
-          })
-
-        )
-      })}
     </main>
   )
 }
 
-export const query = graphql`
-  query{
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            projects {
-              title
-              images {
-                src {
-                  childImageSharp {
-                    gatsbyImageData(
-                      width: 400
-                      placeholder: BLURRED
-                      formats: [AUTO, WEBP, AVIF]
-                    )
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
 export default IndexPage
