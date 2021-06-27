@@ -25,15 +25,15 @@ const IndexPage = () => {
       <div className={styles.backgroundAnimation}>
         <div>
           {[0, 1, 2, 3].map((part, i) => <span style={{
-            transform: `rotate(${i === backgroundPartToMove && angles[Math.round(Math.random() * 3)]}deg)`
+            transform: `rotate(${i === backgroundPartToMove && angles[Math.floor(Math.random() * angles.length - 1)]}deg)`
           }}></span>)}
         </div>
       </div>
 
-      <figure className={styles.showInfo}>
+      <section className={styles.showInfo}>
         <hgroup>
           <h1><strong>Degree Show</strong></h1>
-          <h1>GRAPHIC DESIGN & UX/UI</h1>
+          <h1>GRAPHIC DESIGN &amp; UX/UI</h1>
           <h3>
             8th and 9th july 2021
           </h3>
@@ -41,14 +41,13 @@ const IndexPage = () => {
             Holborn, London
           </h3>
         </hgroup>
-      </figure>
+      </section>
 
-
-      <figure className={styles.tickets}>
+      <section className={styles.tickets}>
         <a href="" className={styles.ticketsBtn}>
           <h3>GET YOUR TICKETS</h3>
         </a>
-        <div className={styles.comingSoon}>
+        <figure className={styles.comingSoon}>
           <h3>
             <strong>
               COMING SOON
@@ -57,9 +56,8 @@ const IndexPage = () => {
           <h3>
             RAVENSBOURNE UNIVERSITY
           </h3>
-        </div>
-      </figure>
-
+        </figure>
+      </section>
 
     </main>
   )
