@@ -42,7 +42,7 @@ const IndexPage = () => {
           <h1><strong>DEGREE SHOW</strong></h1>
           <h1>GRAPHIC DESIGN &amp; UX/UI</h1>
           <h3>
-            8th and 9th july 2021
+            8th and 9th July 2021
           </h3>
           <h3>
             Holborn, London
