@@ -7,7 +7,7 @@ introduction: James is an up and coming creative working with design, art and
   relationships and fandom in the digital age. This is combined with stunning
   visuals created using mixed media techniques and an emphasis on image creation
   and manipulation.
-thumbnail: profile-image-3.jpg
+thumbnail: image-8.jpg
 links:
   - https://www.instagram.com/jamesranger_art/
   - https://www.behance.net/JamesRanger/projects
