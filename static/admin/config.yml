@@ -23,6 +23,7 @@ collections:
         hint: "Seperate each item with a comma"
         name: "links"
         widget: "list"
+        hint: 'Full URL: include https://...'
         default: [""]
       - label: "Projects"
         name: "projects"
@@ -35,5 +36,6 @@ collections:
             hint: "All images should be below 750kb"
             name: "images"
             widget: "list"
+            required: false
             fields:
-              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Image", name: "src", widget: "image", required: false }

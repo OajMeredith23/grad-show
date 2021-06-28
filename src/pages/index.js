@@ -5,13 +5,19 @@ import * as styles from './index.module.sass'
 import _ from 'lodash'
 import { styled } from "@material-ui/core"
 
+const colors = ['#ffabcd', '#CCE247', '#002BC1', '#FE3D2B'];
+
 const IndexPage = () => {
 
 
   const [backgroundPartToMove, setBackgroundPartToMove] = useState(null);
+  const [randomColor, setRandomColor] = useState(null)
   const angles = [0, 90, 180, 270]
 
   useEffect(() => {
+
+    setRandomColor(colors[Math.round(Math.random() * colors.length - 1)]);
+
     const pickRandomBackgroundPartToMove = setInterval(() => {
       setBackgroundPartToMove(Math.round(Math.random() * 4))
     }, 500);
@@ -25,7 +31,8 @@ const IndexPage = () => {
       <div className={styles.backgroundAnimation}>
         <div>
           {[0, 1, 2, 3].map((part, i) => <span style={{
-            transform: `rotate(${i === backgroundPartToMove && angles[Math.floor(Math.random() * angles.length - 1)]}deg)`
+            transform: `rotate(${i === backgroundPartToMove && angles[Math.floor(Math.random() * angles.length - 1)]}deg)`,
+            background: randomColor
           }}></span>)}
         </div>
       </div>
