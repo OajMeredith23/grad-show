@@ -14,7 +14,7 @@ const IndexPage = () => {
   useEffect(() => {
     const pickRandomBackgroundPartToMove = setInterval(() => {
       setBackgroundPartToMove(Math.round(Math.random() * 4))
-    }, 1000);
+    }, 500);
 
 
     return () => clearInterval(pickRandomBackgroundPartToMove);
@@ -32,7 +32,7 @@ const IndexPage = () => {
 
       <section className={styles.showInfo}>
         <hgroup>
-          <h1><strong>Degree Show</strong></h1>
+          <h1><strong>DEGREE SHOW</strong></h1>
           <h1>GRAPHIC DESIGN &amp; UX/UI</h1>
           <h3>
             8th and 9th july 2021
