@@ -20,10 +20,9 @@ collections:
       - { label: 'Introduction', name: 'introduction', widget: 'string' }
       - { label: 'Profile Image', name: 'thumbnail', widget: 'image'}
       - label: "Portfolio & Social media links"
-        hint: "Seperate each item with a comma"
+        hint: "Seperate each item with a comma. Use full URL: include https://..."
         name: "links"
         widget: "list"
-        hint: 'Full URL: include https://...'
         default: [""]
       - label: "Projects"
         name: "projects"
