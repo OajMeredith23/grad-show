@@ -25,11 +25,11 @@ const IndexPage = ({ data }) => {
 
       {designers.map(({ node }, i) => {
 
-        const imgs = node.frontmatter.projects.map(proj => { return { image: proj.images[0].src, title: proj.title } }).flat();
+        const imgs = node.frontmatter.projects?.map(proj => { return { image: proj.images[0].src, title: proj.title } }).flat();
 
         return (
 
-          imgs.map(({ title, image }, i) => {
+          imgs?.map(({ title, image }, i) => {
             return (
               <Link
                 to={`${node.fields.slug.slice(0, -1)}#${_.snakeCase(title)}`} // Remove trailing slash and convert project title to snake case for URL anchor
