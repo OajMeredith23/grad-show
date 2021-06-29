@@ -6,5 +6,13 @@ introduction: A creative that enjoys using different mediums to communicate
   illustration, branding & photography in print and digital contexts.
 thumbnail: tcfgjn.png
 links:
-  - ""
+  - https://onamikahossain.myportfolio.com         /https://www.instagram.com/xxamiikaxx/
+projects:
+  - title: "Provoke Typeface Project "
+    description: A typeface that plays with stereotypes of feminine type in relation
+      to society's ideas of feminity & provocativeness.
+    images:
+      - src: e6cc639e-5e15-48dd-8822-5ae4fa951983_rw_1920.png
+      - src: s.jpg
+      - src: belt-1.png
 ---
