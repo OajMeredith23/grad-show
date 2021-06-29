@@ -15,4 +15,12 @@ projects:
       - src: e6cc639e-5e15-48dd-8822-5ae4fa951983_rw_1920.png
       - src: s.jpg
       - src: belt-1.png
+  - title: "Rainy Days "
+    description: an app to help young people & people with mental health conditions,
+      manage their chores, clean & organize for better productivity & mental
+      health.
+    images:
+      - src: rainyyy-new-.jpg
+      - src: startup-pages-mockup-.png
+      - src: lelisttttt.jpg
 ---
