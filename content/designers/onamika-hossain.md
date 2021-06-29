@@ -16,11 +16,18 @@ projects:
       - src: s.jpg
       - src: belt-1.png
   - title: "Rainy Days "
-    description: an app to help young people & people with mental health conditions,
+    description: An app to help young people & people with mental health conditions,
       manage their chores, clean & organize for better productivity & mental
       health.
     images:
       - src: rainyyy-new-.jpg
       - src: startup-pages-mockup-.png
       - src: lelisttttt.jpg
+  - title: "Eye Am Not A Human Project "
+    description: A project about A.I facial recognition, philosophy & human desires.
+    images:
+      - src: b1.jpg
+      - src: eye5.jpg
+      - src: eye1.jpg
+      - src: p61...jpg
 ---
