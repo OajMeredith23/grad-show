@@ -1,6 +1,6 @@
 ---
 title: Oliver Meredith
-course: UX/UI
+course: UX/UI Design
 introduction: This is the description of the guy who developed this website.
 thumbnail: gnomonic-map.png
 links:
