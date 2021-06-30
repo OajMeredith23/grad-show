@@ -5,7 +5,9 @@ import { Helmet } from 'react-helmet'
 import * as styles from './designer.module.sass'
 import { links } from "min-document"
 import _ from 'lodash'
-import psl from 'psl'
+import FeatherIcon from 'feather-icons-react';
+
+import Lightbox from '../components/Lightbox'
 
 const detectWebsite = (url) => {
   // var url = "http://scratch99.com/web-development/javascript/";
@@ -20,8 +22,8 @@ const detectWebsite = (url) => {
 }
 export default function Posts({ data }) {
 
-  const contentContainer = useRef(null);
-  const [projDimensions, setProjDimensions] = useState(null);
+  const contentContainer = useRef(null)
+  const [lightboxImage, setLightboxImage] = useState(null);
   const post = data.markdownRemark;
 
   const {
@@ -43,6 +45,7 @@ export default function Posts({ data }) {
         <meta property="og:type" content="website" />
       </Helmet>
 
+      <Lightbox image={lightboxImage} close={() => setLightboxImage(null)} />
       <main className={styles.container}>
 
 
@@ -54,7 +57,7 @@ export default function Posts({ data }) {
           </hgroup>
         </header>
 
-        <div className={styles.content}>
+        <div className={styles.content} ref={contentContainer}>
 
           <figure className={styles.designerInfo}>
             <p>
@@ -93,17 +96,41 @@ export default function Posts({ data }) {
 
                 {project.images?.map(image => {
                   return image.src && (
-                    <GatsbyImage image={getImage(image.src)} className={styles.projectImage} />
+                    <>
+                      <GatsbyImage
+                        image={getImage(image.src)}
+                        className={styles.projectImage}
+                        onClick={() => setLightboxImage(image.src)}
+                      />
+                    </>
                   )
                 })}
               </>
             )
           })}
+
+          <aside
+            className={styles.goBack}
+            onClick={() => {
+              contentContainer.current.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              })
+              console.log("hi")
+            }}
+          >
+            <strong>
+              Go back to bio and links
+            </strong>
+            <FeatherIcon icon="arrow-left" size="72" />
+          </aside>
         </div>
       </main>
     </>
   )
 }
+
 
 export const query = graphql`
   query($slug: String!) {

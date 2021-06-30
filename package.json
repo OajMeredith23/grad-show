@@ -17,6 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "feather-icons-react": "^0.4.3",
     "gatsby": "^3.4.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.4.0",
@@ -34,7 +35,6 @@
     "lodash": "^4.17.21",
     "netlify-cli": "^3.28.0",
     "netlify-cms-app": "^2.15.2",
-    "psl": "^1.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
