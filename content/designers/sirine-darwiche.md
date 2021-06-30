@@ -16,5 +16,13 @@ links:
 projects:
   - title: GROUND ZERO
     images:
-      - {}
+      - src: ground-zero-3.jpg
+      - src: ground-zero-1.jpg
+    description: Ground Zero is an experimental, journal-like editorial that
+      explores the concepts and issues surrounding culture shock, with a
+      specific focus on London. Visualising the designer's personal experience
+      through playfulness and humour, the editorial takes the reader on a
+      journey through 3 different phases of culture shock, with a goal of
+      shedding light and positivity on a rather difficult transitional process.
+    video: https://www.youtube.com/watch?v=DqEQ1RZMITY
 ---
