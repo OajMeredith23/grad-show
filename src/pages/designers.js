@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
 
       {designers.map(({ node }, i) => {
 
-        const imgs = node.frontmatter.projects?.map(proj => { return { image: proj.images[0].src, title: proj.title } }).flat();
+        const imgs = node.frontmatter.projects?.map(proj => { return { image: proj?.images[0] && proj?.images[0].src, title: proj.title } }).flat();
 
         return (
 

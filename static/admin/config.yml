@@ -36,6 +36,5 @@ collections:
             hint: "All images should be below 750kb and either PNGs or JPEGs"
             name: "images"
             widget: "list"
-            required: false
             fields:
-              - { label: "Image", name: "src", widget: "image", required: false }
+              - { label: "Image", name: "src", widget: "image"}
