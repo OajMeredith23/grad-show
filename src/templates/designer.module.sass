@@ -30,8 +30,10 @@
     grid-row: 2
     display: grid 
     height: 100%
+    padding-right: 1em
     grid-gap: var(--spacing)
     @media(min-width: 768px)
+        padding-right: 0
         grid-auto-columns: 10vw
         grid-auto-flow: column
         overflow-x: auto 
@@ -43,13 +45,16 @@
     @media(min-width: 768px)
         grid-column: span 2
 
+.links 
+    margin-top: var(--spacing)
 .projectInfo
     @media(min-width: 768px)
-        grid-column: span 1
+        grid-column: span 2
 
 .projectImage
+    grid-column: 1 / -1
     @media(min-width: 768px)
-        grid-column: span 5
+        grid-column: span 6
     img, picture 
         // border: 2px solid red 
         // object-fit: contain !important

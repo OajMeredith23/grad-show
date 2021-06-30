@@ -5,7 +5,19 @@ import { Helmet } from 'react-helmet'
 import * as styles from './designer.module.sass'
 import { links } from "min-document"
 import _ from 'lodash'
+import psl from 'psl'
 
+const detectWebsite = (url) => {
+  // var url = "http://scratch99.com/web-development/javascript/";
+  var domain = url
+    .replace("http://", '')
+    .replace("https://", '')
+    .replace('www.', '')
+    .replace('.com', '')
+    .replace('.co.uk', '')
+    .split(/[/?#]/)[0];
+  return domain
+}
 export default function Posts({ data }) {
 
   const contentContainer = useRef(null);
@@ -50,9 +62,9 @@ export default function Posts({ data }) {
             </p>
 
             {links &&
-              <ul>
+              <ul className={styles.links}>
                 <li>
-                  <h4><strong>Links</strong></h4>
+                  <h3><strong>Links</strong></h3>
                 </li>
                 {links.map(link =>
                   <a
@@ -61,7 +73,10 @@ export default function Posts({ data }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <li>{link}</li>
+                    <li style={{
+                      textTransform: 'capitalize',
+                      textDecoration: 'underline'
+                    }}>{detectWebsite(link)}</li>
                   </a>
                 )}
               </ul>
@@ -72,7 +87,7 @@ export default function Posts({ data }) {
             return (
               <>
                 <div className={styles.projectInfo} id={_.snakeCase(project.title)}>
-                  <h3>{project.title}</h3>
+                  <h3><strong>{project.title}</strong></h3>
                   <p>{project.description}</p>
                 </div>
 
