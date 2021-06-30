@@ -8,7 +8,7 @@ introduction: "Sirine is passionate, multi-disciplinary Lebanese graphic
   believes that these approaches allow her to communicate her concepts more
   effectively. She specialises in editorial design, identity branding,
   typography, illustration and prototype design.  "
-thumbnail: stickerss-copy.jpg
+thumbnail: tempimageforsave.jpg
 links:
   - https://sirinedarwishgraphics.cargo.site/admin/14607192
   - https://www.instagram.com/sirinedarwishgraphics/
@@ -28,4 +28,10 @@ projects:
       journey through 3 different phases of culture shock, with a goal of
       shedding light and positivity on a rather difficult transitional process.
     video: https://www.youtube.com/watch?v=DqEQ1RZMITY
+  - title: PALMYRA
+    description: "Palmyra is a typeface designed with  the fusion of a modern Latin
+      typeface with characteristics of classic Arabic calligraphic elements. The
+      type specimen utilises satire to address Arab stereotypes in the West
+      through the depiction of Orientalist distortions and the commercialisation
+      of ethnic property. "
 ---
