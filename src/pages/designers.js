@@ -32,7 +32,8 @@ const IndexPage = ({ data }) => {
           imgs?.map(({ title, image }, i) => {
             return (
               <Link
-                to={`${node.fields.slug.slice(0, -1)}#${_.snakeCase(title)}`} // Remove trailing slash and convert project title to snake case for URL anchor
+                to={node.fields.slug} // Remove trailing slash and convert project title to snake case for URL anchor
+                // to={`${node.fields.slug.slice(0, -1)}#${_.snakeCase(title)}`} // Remove trailing slash and convert project title to snake case for URL anchor
                 key={node.id}
               >
                 <GatsbyImage
