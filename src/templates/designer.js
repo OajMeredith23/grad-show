@@ -20,13 +20,6 @@ export default function Posts({ data }) {
     projects
   } = post.frontmatter
 
-  console.log(projects.flat())
-
-
-  const sizes = [400, 500, 600, 700];
-
-  const randomSize = () => sizes[Math.round(Math.random() * sizes.length - 1)];
-
 
   return (
     <>
@@ -75,18 +68,16 @@ export default function Posts({ data }) {
             }
           </figure>
 
-          {projects.map(project => {
+          {projects?.map(project => {
             return (
               <>
-
                 <div className={styles.projectInfo} id={_.snakeCase(project.title)}>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
 
                 {project.images?.map(image => {
-                  console.log(image.src.relativePath)
-                  return (
+                  return image.src && (
                     <GatsbyImage image={getImage(image.src)} className={styles.projectImage} />
                   )
                 })}
@@ -120,8 +111,6 @@ export const query = graphql`
                       formats: [AUTO, WEBP, AVIF]
                     )
                   }
-                  relativePath
-                  absolutePath
               }
             }
           }
