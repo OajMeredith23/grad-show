@@ -20,4 +20,12 @@ projects:
       - src: lingotime-01.jpg
       - src: packaging-advertisement.png
       - src: game-cards.png
+  - title: Dilemmas of Sustainable Graphic Design
+    description: For my final major project, I explored the ways we can achieve
+      sustainability in design whilst accepting that there isn't one correct
+      answer. I put my research into an editorial as an informative book for
+      other designers and consumers, but presenting the contradictions we find
+      ourselves in when designing sustainably.
+    images:
+      - src: fmp-03.jpg
 ---
