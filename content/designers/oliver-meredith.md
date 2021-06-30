@@ -16,4 +16,5 @@ projects:
   - title: BBC Evoke
     images:
       - src: bbc-evoke.001.jpeg
+  - title: Folktiles
 ---
