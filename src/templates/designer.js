@@ -140,6 +140,7 @@ export const query = graphql`
         title
         introduction
         links
+        course
         projects {
             title
             description

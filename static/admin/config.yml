@@ -17,7 +17,7 @@ collections:
       preview: false
     fields:
       - { label: 'Name', name: 'title', widget: 'string'}
-      - {label: "Course", name: "course", widget: "select", options: ["Graphic Design", "UX/UI"]}
+      - {label: "Course", name: "course", widget: "select", options: ["Graphic Design", "UX/UI Design"]}
       - { label: 'Introduction', name: 'introduction', widget: 'string' }
       - { label: 'Profile Image', name: 'thumbnail', widget: 'image'}
       - label: "Portfolio & Social media links"
