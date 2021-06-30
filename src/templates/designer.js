@@ -4,6 +4,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { Helmet } from 'react-helmet'
 import * as styles from './designer.module.sass'
 import { links } from "min-document"
+import _ from 'lodash'
 
 export default function Posts({ data }) {
 
@@ -19,21 +20,8 @@ export default function Posts({ data }) {
     projects
   } = post.frontmatter
 
-  console.log({ projects })
+  console.log(projects.flat())
 
-
-  useEffect(() => {
-    console.log("W", contentContainer.current.offsetWidth)
-    console.log("Height", contentContainer.current.offsetHeight);
-
-    setProjDimensions({
-      width: contentContainer.current.offsetWidth,
-      height: contentContainer.current.offsetHeight
-    })
-
-    return () => { };
-
-  }, [])
 
   const sizes = [400, 500, 600, 700];
 
@@ -62,8 +50,8 @@ export default function Posts({ data }) {
         </header>
 
         <div className={styles.content}>
-          <section className={styles.designerInfo}>
 
+          <figure className={styles.designerInfo}>
             <p>
               {introduction}
             </p>
@@ -85,51 +73,29 @@ export default function Posts({ data }) {
                 )}
               </ul>
             }
-          </section>
+          </figure>
 
-          <section className={styles.projects} ref={contentContainer}>
-            {projDimensions &&
+          {projects.map(project => {
+            return (
+              <>
 
-              projects.map((project, i) => {
-                console.log(project.images)
-                console.log({ projDimensions })
-                // if (i > 0) return
-                return (
+                <div className={styles.projectInfo} id={_.snakeCase(project.title)}>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
 
-                  <figure
-                    className={styles.project}
-                    key={project.title}
-                  >
-                    <figcaption>
-                      <h3>{project.title}</h3>
-                      <p>{project.description}</p>
-                    </figcaption>
-                    <div className={styles.projectImageContainer}>
-                      {project.images.map(img => {
-                        return (
-                          <div className={styles.projectImage}></div>
-                          // <GatsbyImage
-                          //   className={styles.projectImage}
-                          //   image={getImage(img.src)}
-                          //   alt=""
-                          // />
-                        )
-                      })}
-                    </div>
-                  </figure>
-                )
-              })
-
-            }
-
-          </section>
-
-
+                {project.images?.map(image => {
+                  console.log(image.src.relativePath)
+                  return (
+                    <GatsbyImage image={getImage(image.src)} className={styles.projectImage} />
+                  )
+                })}
+              </>
+            )
+          })}
         </div>
-
       </main>
-
-    </ >
+    </>
   )
 }
 
@@ -149,14 +115,13 @@ export const query = graphql`
               src {
                 childImageSharp {
                     gatsbyImageData(
-                      height: 800
+                      width: 1200
                       placeholder: BLURRED
                       formats: [AUTO, WEBP, AVIF]
                     )
-                    fluid {
-                      ...GatsbyImageSharpFluid
-                    }
                   }
+                  relativePath
+                  absolutePath
               }
             }
           }
@@ -164,30 +129,3 @@ export const query = graphql`
     }
   }
   `
-  //  {projDimensions &&
-  //   (
-  //     <>
-  //       <h2>{JSON.stringify(projDimensions)}</h2>
-  //       <figure className={styles.project}>
-
-  //         <figcaption>
-  //           <h3>"Title"</h3>
-  //           <p>description</p>
-  //         </figcaption>
-
-  //         <div className={styles.projectImageContainer}>
-  //           <img
-  //             className={styles.projectImage}
-  //             src={`http://placekitten.com/2200/2000`} alt=""
-  //             height={projDimensions.height - 30}
-  //           />
-  //           {/* <img
-  //             className={styles.projectImage}
-  //             src={`http://placekitten.com/2200/2000`} alt=""
-  //             height={projDimensions.height - 30}
-  //           /> */}
-  //         </div>
-  //       </figure>
-  //     </>
-  //   )
-  // }

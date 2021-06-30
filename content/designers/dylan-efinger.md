@@ -29,6 +29,4 @@ projects:
       they didn’t exist anywhere together as an archive. So when we were set
       this brief, I knew it was time to tackle the challenge.
     video: https://youtu.be/xGdWpIHwPbg
-    images:
-      - {}
 ---
