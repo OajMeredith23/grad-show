@@ -50,7 +50,9 @@ const IndexPage = () => {
         </hgroup>
       </section>
 
+
       <section className={styles.tickets}>
+
         <a href="https://www.ravensbourne.ac.uk/connect/events/graphic-design-uxui-degree-show" className={styles.ticketsBtn}>
           <h3>GET YOUR TICKETS</h3>
         </a>
