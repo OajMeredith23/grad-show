@@ -5,7 +5,7 @@
         --spacing: 3em   
 
 .container 
-    padding: 1em  
+    padding: 1em 2em  
     display: grid 
     grid-gap: var(--spacing)
     @media(min-width: 768px)
@@ -17,6 +17,9 @@
         grid-row: 1
         display: flex
         flex-direction: column
+        text-transform: uppercase
+        h1 
+            margin-bottom: -.2em
         @media(min-width: 768px)
             flex-direction: row
             h1, h2
@@ -48,8 +51,9 @@
     height: 100%
     display: inline-block
     grid-column: 1 / -1
+    
     @media(min-width: 768px)
-        margin-right: var(--spacing)
+        // margin-right: var(--spacing)
         grid-column: span 2
 
 .links 
@@ -58,12 +62,18 @@
     grid-column: 1 / -1
     @media(min-width: 768px)
         grid-column: span 2
+        padding-left: calc(var(--spacing) * 2)
+
+.projectInfo ~ .projectImage
+    border: 2px solid pink
+            
 
 .projectImage
     grid-column: 1 / -1
     cursor: pointer
     @media(min-width: 768px)
         grid-column: span 5
+    
     // img, picture 
     //     object-fit: contain !important
         // object-position: top left

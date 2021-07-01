@@ -26,7 +26,7 @@ const IndexPage = () => {
     return () => clearInterval(pickRandomBackgroundPartToMove);
   }, [])
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
 
       <div className={styles.backgroundAnimation}>
         <div>
@@ -68,7 +68,7 @@ const IndexPage = () => {
         </figure>
       </section>
 
-    </main>
+    </div>
   )
 }
 
