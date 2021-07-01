@@ -37,11 +37,11 @@
     grid-column: 1 / -1 
     grid-row: 2
     height: 100%
-    grid-gap: var(--spacing)
-    // padding-right: 1em
     display: grid 
+    grid-gap: var(--spacing) 0
     @media(min-width: 768px)
-        padding-right: 0
+        grid-gap: var(--spacing)
+        // padding-right: 0
         grid-auto-columns: 10vw
         grid-auto-flow: column
         overflow-x: auto 
@@ -53,7 +53,6 @@
     grid-column: 1 / -1
     
     @media(min-width: 768px)
-        // margin-right: var(--spacing)
         grid-column: span 2
 
 .links 
@@ -64,8 +63,6 @@
         grid-column: span 2
         padding-left: calc(var(--spacing) * 2)
 
-.projectInfo ~ .projectImage
-    border: 2px solid pink
             
 
 .projectImage
