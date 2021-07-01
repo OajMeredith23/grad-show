@@ -16,6 +16,7 @@ const detectWebsite = (url) => {
     .replace("https://", '')
     .replace('www.', '')
     .replace('.com', '')
+    .replace('.net', '')
     .replace('.co.uk', '')
     .split(/[/?#]/)[0];
   return domain
@@ -36,7 +37,9 @@ export default function Posts({ data }) {
 
 
   return (
-    <>
+
+
+    <main className={styles.container}>
       <Helmet title={title} defer={false}>
         <title>{title}</title>
         <meta name="description" content={introduction} />
@@ -44,90 +47,86 @@ export default function Posts({ data }) {
         <meta property="og:description" content={title} />
         <meta property="og:type" content="website" />
       </Helmet>
-
       <Lightbox image={lightboxImage} close={() => setLightboxImage(null)} />
-      <main className={styles.container}>
 
+      <header>
+        <div className={styles.icon}></div>
+        <hgroup>
+          <h1><strong>{title}</strong></h1>
+          <h2>{course}</h2>
+        </hgroup>
+      </header>
 
-        <header>
-          <div className={styles.icon}></div>
-          <hgroup>
-            <h1><strong>{title}</strong></h1>
-            <h2>{course}</h2>
-          </hgroup>
-        </header>
+      <div className={styles.content} ref={contentContainer}>
 
-        <div className={styles.content} ref={contentContainer}>
+        <figure className={styles.designerInfo}>
+          <p>
+            {introduction}
+          </p>
 
-          <figure className={styles.designerInfo}>
-            <p>
-              {introduction}
-            </p>
+          {links &&
+            <ul className={styles.links}>
+              <li>
+                <h3><strong>Links</strong></h3>
+              </li>
+              {links.map(link =>
+                <a
+                  key={link}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li style={{
+                    textTransform: 'capitalize',
+                    textDecoration: 'underline'
+                  }}>{detectWebsite(link)}</li>
+                </a>
+              )}
+            </ul>
+          }
+        </figure>
 
-            {links &&
-              <ul className={styles.links}>
-                <li>
-                  <h3><strong>Links</strong></h3>
-                </li>
-                {links.map(link =>
-                  <a
-                    key={link}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li style={{
-                      textTransform: 'capitalize',
-                      textDecoration: 'underline'
-                    }}>{detectWebsite(link)}</li>
-                  </a>
-                )}
-              </ul>
-            }
-          </figure>
+        {projects?.map(project => {
+          return (
+            <>
+              <div className={styles.projectInfo} id={_.snakeCase(project.title)}>
+                <h3><strong>{project.title}</strong></h3>
+                <p>{project.description}</p>
+              </div>
 
-          {projects?.map(project => {
-            return (
-              <>
-                <div className={styles.projectInfo} id={_.snakeCase(project.title)}>
-                  <h3><strong>{project.title}</strong></h3>
-                  <p>{project.description}</p>
-                </div>
+              {project.images?.map(image => {
+                return image.src && (
+                  <>
+                    <GatsbyImage
+                      image={getImage(image.src)}
+                      className={styles.projectImage}
+                      onClick={() => setLightboxImage(image.src)}
+                    />
+                  </>
+                )
+              })}
+            </>
+          )
+        })}
 
-                {project.images?.map(image => {
-                  return image.src && (
-                    <>
-                      <GatsbyImage
-                        image={getImage(image.src)}
-                        className={styles.projectImage}
-                        onClick={() => setLightboxImage(image.src)}
-                      />
-                    </>
-                  )
-                })}
-              </>
-            )
-          })}
-
-          <aside
-            className={styles.goBack}
-            onClick={() => {
-              contentContainer.current.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-              })
-              console.log("hi")
-            }}
-          >
-            <strong>
-              Go back to bio and links
-            </strong>
-            <FeatherIcon icon="arrow-left" size="72" />
-          </aside>
-        </div>
-      </main>
-    </>
+        <aside
+          className={styles.goBack}
+          onClick={() => {
+            contentContainer.current.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            })
+            console.log("hi")
+          }}
+        >
+          <strong>
+            Go back to bio and links
+          </strong>
+          <FeatherIcon icon="arrow-left" size="72" />
+        </aside>
+      </div>
+    </main>
   )
 }
 

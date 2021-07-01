@@ -20,16 +20,14 @@ const Layout = ({ children, location }) => {
             </Helmet>
 
 
-            <div>
 
-                <main
-                    key={location?.pathname}
-                >
-                    {children}
-                </main>
+            <main
+                key={location?.pathname}
+            >
+                {children}
+            </main>
 
 
-            </div>
 
         </div>
     )
