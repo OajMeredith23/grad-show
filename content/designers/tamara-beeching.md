@@ -22,4 +22,14 @@ projects:
       differs from person to person I wanted to allow for each person to use
       their brain to see an outcome to allow for more of a variety into
       experiencing synesthesia.
+  - title: Time
+    description: "The sun has been used throughout history as a way to navigate
+      time, mainly using the suns rays in union with other objects as well as
+      plotting the position of the sun to tell time.   This project aims to
+      combine the idea of freezing time with exploring how light is manipulated
+      by objects throughout the day therefore highlighting the unseen effects of
+      time.  Each print can then be explored through the website showing the
+      different levels of light, as well as the angle the light was held at and
+      what time of day this was meant to represent.    link:
+      https://xd.adobe.com/view/6cac6a0a-3118-456b-5297-ab3f2a677201-1a9d/"
 ---
