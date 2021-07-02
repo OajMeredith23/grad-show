@@ -87,12 +87,30 @@ export default function Posts({ data }) {
         </figure>
 
         {projects?.map(project => {
+          console.log(project.video)
           return (
             <>
               <div className={styles.projectInfo} id={_.snakeCase(project.title)}>
                 <h3><strong>{project.title}</strong></h3>
                 <p>{project.description}</p>
               </div>
+
+              {project.video &&
+                <Video
+                  videoSrcURL={project.video}
+
+                  videoTitle="Official Music Video on YouTube"
+                />
+                // <iframe
+                //   src={project.video}
+                //   title={project.title}
+                //   frameBorder="0"
+                //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                //   webKitAllowFullScreen="true"
+                //   mozAllowFullScreen="true"
+                //   allowFullScreen
+                // ></iframe>
+              }
 
               {project.images?.map(image => {
                 return image.src && (
@@ -129,6 +147,54 @@ export default function Posts({ data }) {
     </main>
   )
 }
+
+
+
+const parseVideoURL = (url) => {
+
+  let output = url;
+
+  if (url.includes('youtube')) {
+    console.log("Youtube")
+    const regex = /watch\?v=/i;
+    output = url.replace(regex, 'embed/');
+  }
+
+  if (url.includes('youtu.be')) {
+    console.log("Youtu.be")
+    const regex = /be\?v=/i;
+    output = url.replace('.be', 'be.com/embed');
+  }
+
+  if (url.includes('vimeo')) {
+
+    console.log("vimeo");
+    if (!url.includes('player')) {
+      output = [url.slice(0, url.indexOf('vimeo')), 'player.', url.slice(url.indexOf('vimeo'))].join(''); // add 'player. to url
+      output = [output.slice(0, output.indexOf('.com') + 4), '/video', output.slice(output.indexOf('.com') + 4)].join('')
+    }
+  }
+
+  return output
+}
+
+const Video = ({ videoSrcURL, videoTitle, ...props }) => {
+
+  return (
+    <div className={styles.projectVideo}>
+      <iframe
+        src={parseVideoURL(videoSrcURL)}
+        title={videoTitle}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        frameBorder="0"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        allowFullScreen
+      />
+    </div>
+  )
+}
+
 
 
 export const query = graphql`
