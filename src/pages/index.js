@@ -5,24 +5,25 @@ import * as styles from './index.module.sass'
 import _ from 'lodash'
 import { styled } from "@material-ui/core"
 import { window } from 'browser-monads'
-const colors = ['#ffabcd', '#CCE247', '#002BC1', '#FE3D2B'];
+import Div100vh from 'react-div-100vh';
+const colors = ['#ffabcd', '#CCE247', '#FE3D2B'];
 
 const IndexPage = () => {
 
 
   const [backgroundPartToMove, setBackgroundPartToMove] = useState(null);
-  const [containerHeight, setContainerHeight] = useState(null);
-  const containerRef = useRef(null)
   const [randomColor, setRandomColor] = useState(null)
   const angles = [0, 90, 180, 270]
+  // const [containerHeight, setContainerHeight] = useState(null);
+  // const containerRef = useRef(null)
 
-  useEffect(() => {
-    console.log(window.innerHeight)
-    setContainerHeight(window.innerHeight)
-    window.addEventListener('resize', () => {
-      setContainerHeight(window.innerHeight)
-    })
-  }, [])
+  // useEffect(() => {
+  //   console.log(window.innerHeight)
+  //   setContainerHeight(window.innerHeight)
+  //   window.addEventListener('resize', () => {
+  //     setContainerHeight(window.innerHeight)
+  //   })
+  // }, [])
 
   useEffect(() => {
 
@@ -35,10 +36,10 @@ const IndexPage = () => {
     return () => clearInterval(pickRandomBackgroundPartToMove);
   }, [])
   return (
-    <div
+    <Div100vh
       className={styles.container}
-      style={{ minHeight: `${containerHeight}px` }}
-      ref={containerRef}
+    // style={{ minHeight: `${containerHeight}px` }}
+    // ref={containerRef}
     >
 
       <div className={styles.backgroundAnimation}>
@@ -81,7 +82,7 @@ const IndexPage = () => {
         </figure>
       </section>
 
-    </div>
+    </Div100vh>
   )
 }
 
