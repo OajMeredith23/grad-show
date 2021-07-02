@@ -17,6 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "browser-monads": "^1.0.0",
     "feather-icons-react": "^0.4.3",
     "gatsby": "^3.4.1",
     "gatsby-plugin-google-fonts": "^1.0.1",

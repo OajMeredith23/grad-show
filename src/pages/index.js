@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from './index.module.sass'
 import _ from 'lodash'
 import { styled } from "@material-ui/core"
-
+import { window } from 'browser-monads'
 const colors = ['#ffabcd', '#CCE247', '#002BC1', '#FE3D2B'];
 
 const IndexPage = () => {
@@ -26,7 +26,10 @@ const IndexPage = () => {
     return () => clearInterval(pickRandomBackgroundPartToMove);
   }, [])
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ minHeight: `${window.innerHeight}px` }}
+    >
 
       <div className={styles.backgroundAnimation}>
         <div>
