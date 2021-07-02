@@ -21,4 +21,19 @@ projects:
       - src: inc-adjusted-1-2.jpg
       - src: inc-alt-2-2.jpg
       - src: inc-alt-3-2.jpg
+  - images:
+      - src: 1-3.jpg
+      - src: 2-2.jpg
+      - src: 3.jpg
+      - src: 4.jpg
+      - src: 5.jpg
+      - src: 6.jpg
+      - src: 7-2.jpg
+      - src: 8.jpg
+      - src: 9.jpg
+      - src: 10.jpg
+    title: She Punks
+    description: Zine posters that celebrate female punk musicians from the 70s
+      during their live performances & give an insight of the challenging
+      atmosphere that revolved around them.
 ---
