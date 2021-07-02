@@ -1,11 +1,11 @@
 ---
 title: Paris Daniel
 course: Graphic Design
-introduction: Paris is a level headed, conscientious and mature person who has
-  great enthusiasm for design and an interest in challenging herself to develop
-  her motion and packaging design skills in the near future.  Her interest is in
-  creating bright and colourful designs in which she is open to specialisms such
-  as packaging, motion and editorial design.
+introduction: Paris has great enthusiasm for design and an interest in
+  challenging herself to develop her motion and packaging design skills in the
+  near future.  Her interest is in creating bright and colourful designs in
+  which she is open to specialisms such as packaging, motion and editorial
+  design.
 thumbnail: fmpfinalphotos5.png
 links:
   - https://www.linkedin.com/in/paris-daniel-b07703142/
