@@ -1,5 +1,6 @@
 ---
 title: James Ranger
+course: Graphic Design
 introduction: James is an up and coming creative working with design, art and
   photography to build complex and thought-provoking projects. James enjoys
   tackling important and relevant social issues within our society from
@@ -22,4 +23,12 @@ projects:
       or silence in racist ways.
     images:
       - src: image-2.jpg
+  - title: Parasocial
+    description: My video Parasocial highlights the psychological issues that
+      surround parasocial relationships through symbolic mindscape visuals. Each
+      section of the video is separated by colour this allows the viewer to
+      identify the different parts and gives the content space to breathe
+      amongst the visuals. The visuals aim to be symbolic of Alief the mental
+      state that allows parasocial relationships to form.
+    video: https://youtu.be/26n9HzbP3_c
 ---
