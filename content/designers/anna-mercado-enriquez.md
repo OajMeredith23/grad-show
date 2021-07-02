@@ -19,4 +19,6 @@ projects:
     video: https://youtu.be/IVboVU8Lzw4
     images:
       - src: inc-adjusted-1-2.jpg
+      - src: inc-alt-2-2.jpg
+      - src: inc-alt-3-2.jpg
 ---
