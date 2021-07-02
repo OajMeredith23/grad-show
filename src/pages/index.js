@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from './index.module.sass'
@@ -11,8 +11,18 @@ const IndexPage = () => {
 
 
   const [backgroundPartToMove, setBackgroundPartToMove] = useState(null);
+  const [containerHeight, setContainerHeight] = useState(null);
+  const containerRef = useRef(null)
   const [randomColor, setRandomColor] = useState(null)
   const angles = [0, 90, 180, 270]
+
+  useEffect(() => {
+    console.log(window.innerHeight)
+    setContainerHeight(window.innerHeight)
+    window.addEventListener('resize', () => {
+      setContainerHeight(window.innerHeight)
+    })
+  }, [])
 
   useEffect(() => {
 
@@ -22,14 +32,13 @@ const IndexPage = () => {
       setBackgroundPartToMove(Math.round(Math.random() * 4))
     }, 500);
 
-    console.log("WH,", window.innerHeight);
-
     return () => clearInterval(pickRandomBackgroundPartToMove);
   }, [])
   return (
     <div
       className={styles.container}
-      style={{ minHeight: window.innerHeight ? `${window.innerHeight}px` : '90vh' }}
+      style={{ minHeight: `${containerHeight}px` }}
+      ref={containerRef}
     >
 
       <div className={styles.backgroundAnimation}>
