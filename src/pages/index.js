@@ -22,13 +22,14 @@ const IndexPage = () => {
       setBackgroundPartToMove(Math.round(Math.random() * 4))
     }, 500);
 
+    console.log("WH,", window.innerHeight);
 
     return () => clearInterval(pickRandomBackgroundPartToMove);
   }, [])
   return (
     <div
       className={styles.container}
-      style={{ minHeight: `${window.innerHeight}px` }}
+      style={{ minHeight: window.innerHeight ? `${window.innerHeight}px` : '90vh' }}
     >
 
       <div className={styles.backgroundAnimation}>
