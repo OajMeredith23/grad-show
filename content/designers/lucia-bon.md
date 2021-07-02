@@ -17,8 +17,8 @@ projects:
       literal translations to English. The aim of the game is to guess the
       meaning of the sayings, and to collect the most Expression cards. "
     images:
-      - src: lingotime-01.jpg
-      - src: packaging-advertisement.png
+      - src: lingotime-lq.jpg
+      - src: packaging-advertisement-lq.png
       - src: game-cards.png
   - title: Dilemmas of Sustainable Graphic Design
     description: For my final major project, I explored the ways we can achieve
@@ -27,5 +27,5 @@ projects:
       other designers and consumers, but presenting the contradictions we find
       ourselves in when designing sustainably.
     images:
-      - src: fmp-03.jpg
+      - src: fmp-03-lq.jpg
 ---
