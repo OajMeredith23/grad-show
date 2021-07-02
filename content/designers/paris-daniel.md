@@ -24,4 +24,8 @@ projects:
     images:
       - src: img_7835e.jpg
     video: https://vimeo.com/570205015
+  - title: "Time & Music "
+    description: Experimental motion graphics series in relation to time and music
+    images:
+      - src: screenshot-2021-07-02-at-09.38.27.png
 ---
