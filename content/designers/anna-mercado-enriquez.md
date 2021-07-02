@@ -21,6 +21,7 @@ projects:
       - src: inc-adjusted-1-2.jpg
       - src: inc-alt-2-2.jpg
       - src: inc-alt-3-2.jpg
+      - src: img_6338.jpg
   - images:
       - src: 1-3.jpg
       - src: 2-2.jpg
