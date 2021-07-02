@@ -16,11 +16,12 @@ links:
 projects:
   - title: GROUND ZERO
     images:
-      - src: ground-zero-3.jpg
-      - src: ground-zero-33.jpg
-      - src: ground-zero4.jpg
-      - src: ground-zero-62.jpg
-      - src: ground-zero-6.jpg
+      - src: stickerss-copy.jpg
+      - src: ground-zero-3-min.jpg
+      - src: ground-zero-33-min.jpg
+      - src: ground-zero4-min.jpg
+      - src: ground-zero-62-min.jpg
+      - src: ground-zero-6-min.jpg
     description: Ground Zero is an experimental, journal-like editorial that
       explores the concepts and issues surrounding culture shock, with a
       specific focus on London. Visualising the designer's personal experience
@@ -35,9 +36,9 @@ projects:
       through the depiction of Orientalist distortions and the commercialisation
       of ethnic property. "
     images:
-      - src: gradshow3-copy.jpg
-      - src: vinyl.jpg
-      - src: palmyra-14.png
-      - src: palmyra-12.png
-      - src: palmyra-13.png
+      - src: palmyra-13-min.png
+      - src: palmyra-12-min.png
+      - src: palmyra-14-min.png
+      - src: vinyl-min.jpg
+      - src: gradshow3-copy-min.jpg
 ---
