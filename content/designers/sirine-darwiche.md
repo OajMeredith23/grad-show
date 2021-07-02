@@ -34,4 +34,10 @@ projects:
       type specimen utilises satire to address Arab stereotypes in the West
       through the depiction of Orientalist distortions and the commercialisation
       of ethnic property. "
+    images:
+      - src: gradshow3-copy.jpg
+      - src: vinyl.jpg
+      - src: palmyra-14.png
+      - src: palmyra-12.png
+      - src: palmyra-13.png
 ---
