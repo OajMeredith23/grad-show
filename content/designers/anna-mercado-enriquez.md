@@ -11,4 +11,12 @@ thumbnail: 61215210_2342387919134249_8160637260551684096_n.jpg
 links:
   - https://amercadoenriquez.myportfolio.com
   - https://www.instagram.com/annamercado.art/
+projects:
+  - title: Inclusive
+    description: "Inclusive Design Packaging - Three pieces that serve as a
+      reference for designers to create a more inclusive packaging for minority
+      groups: dyslexia, gender transitioning and visually impaired users."
+    video: https://youtu.be/IVboVU8Lzw4
+    images:
+      - src: inc-adjusted-1-2.jpg
 ---
