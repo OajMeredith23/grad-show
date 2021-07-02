@@ -32,8 +32,8 @@ collections:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Video", name: "video", widget: "string", hint: 'Must be Vimeo or YouTube URL', required: false }
-          - label: "Images (MUST BE BELOW 750KB)"
-            hint: "All images must be below 750kb and either PNGs or JPEGs"
+          - label: "Images (EACH IMAGE MUST BE BELOW 750KB)"
+            hint: "All images must be below 750kb and either PNGs or JPEGs. Images above 750kb will be removed."
             name: "images"
             widget: "list"
             fields:
