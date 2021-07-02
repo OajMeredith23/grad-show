@@ -26,6 +26,6 @@ projects:
     description: A type specimen which doubles as a calendar aiming to break the
       mould on stereotypes in westernised Chinese cuisine.
     images:
-      - src: jamielam_orientaldragon.jpg
+      - src: specimen-copy.jpg
       - src: specimen-3.jpg
 ---
