@@ -1,55 +1,42 @@
-import React, { useState, useEffect, useRef } from "react"
+import React from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from './index.module.sass'
-import _ from 'lodash'
 import { styled } from "@material-ui/core"
-import { window } from 'browser-monads'
 import Div100vh from 'react-div-100vh';
 const colors = ['#ffabcd', '#CCE247', '#FE3D2B'];
 
 const IndexPage = () => {
 
 
-  const [backgroundPartToMove, setBackgroundPartToMove] = useState(null);
-  const [randomColor, setRandomColor] = useState(null)
-  const angles = [0, 90, 180, 270]
-  // const [containerHeight, setContainerHeight] = useState(null);
-  // const containerRef = useRef(null)
+  // const [backgroundPartToMove, setBackgroundPartToMove] = useState(null);
+  // const [randomColor, setRandomColor] = useState(null)
+  // const angles = [0, 90, 180, 270]
 
   // useEffect(() => {
-  //   console.log(window.innerHeight)
-  //   setContainerHeight(window.innerHeight)
-  //   window.addEventListener('resize', () => {
-  //     setContainerHeight(window.innerHeight)
-  //   })
-  // }, [])
 
-  useEffect(() => {
+  //   setRandomColor(colors[Math.round(Math.random() * colors.length - 1)]);
 
-    setRandomColor(colors[Math.round(Math.random() * colors.length - 1)]);
+  //   const pickRandomBackgroundPartToMove = setInterval(() => {
+  //     setBackgroundPartToMove(Math.round(Math.random() * 4))
+  //   }, 500);
 
-    const pickRandomBackgroundPartToMove = setInterval(() => {
-      setBackgroundPartToMove(Math.round(Math.random() * 4))
-    }, 500);
+  //   return () => clearInterval(pickRandomBackgroundPartToMove);
+  // }, []);
 
-    return () => clearInterval(pickRandomBackgroundPartToMove);
-  }, [])
   return (
     <Div100vh
       className={styles.container}
-    // style={{ minHeight: `${containerHeight}px` }}
-    // ref={containerRef}
     >
 
-      <div className={styles.backgroundAnimation}>
+      {/* <div className={styles.backgroundAnimation}>
         <div>
           {[0, 1, 2, 3].map((part, i) => <span style={{
             transform: `rotate(${i === backgroundPartToMove && angles[Math.floor(Math.random() * angles.length - 1)]}deg)`,
             background: randomColor
           }}></span>)}
         </div>
-      </div>
+      </div> */}
 
       <section className={styles.showInfo}>
         <hgroup>

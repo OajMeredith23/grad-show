@@ -7,13 +7,18 @@ import _ from 'lodash'
 const IndexPage = ({ data }) => {
 
   const designers = data.allMarkdownRemark.edges
+  console.log(designers.length)
 
   return (
     <section className={styles.container}>
 
+      <figure className={styles.landing}>
+        <h1><strong>DEGREE SHOW</strong></h1>
+        <h1>GRAPHIC DESIGN &amp; UX/UI</h1>
 
-
-      {designers.map(({ node }, i) => {
+        <h4>RAVENSBOURNE UNIVERSITY</h4>
+      </figure>
+      {_.shuffle(designers).map(({ node }, i) => {
 
         const { title, projects } = node.frontmatter
         const img = projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
