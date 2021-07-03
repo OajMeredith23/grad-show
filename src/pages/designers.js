@@ -9,44 +9,41 @@ const IndexPage = ({ data }) => {
   const designers = data.allMarkdownRemark.edges
 
   return (
-    <main className={styles.container}>
+    <section className={styles.container}>
 
-      <figure className={`${styles.siteIntro} ${styles.info}`} >
-        <hgroup>
-          <h1>Rave Graphics / UX-UI 2021</h1>
-        </hgroup>
-      </figure>
 
-      <figure className={`${styles.showInfo} ${styles.info}`}>
-        <hgroup>
-          <h1>Rave Graphics / UX-UI 2021</h1>
-        </hgroup>
-      </figure>
 
       {designers.map(({ node }, i) => {
 
-        const imgs = node.frontmatter.projects?.map(proj => { return { image: proj.images && proj.images[0].src, title: proj.title } }).flat();
-
+        const { title, projects } = node.frontmatter
+        const img = projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
+        const row = Math.round(Math.random() * 3);
         return (
-          imgs?.map(({ title, image }, j) => {
-            console.log({ image }, title, i)
-            return image && (
-              <Link
-                to={node.fields.slug} // Remove trailing slash and convert project title to snake case for URL anchor
-                key={`${node.id}-${i}-${j}`}
-              >
+          <Link
+            to={node.fields.slug}
+            key={`${node.id}-${i}`}
+            className={styles.designer}
+          >
+            <div className={styles.content}>
+              <div className={styles.imageContainer}>
                 <GatsbyImage
-                  key={`${node.id}-${j}`}
+                  key={`${node.id}`}
+                  image={getImage(img)}
                   className={styles.image}
-                  image={getImage(image)}
                 />
-              </Link>
-            )
-          })
-
+              </div>
+              <h1
+              >
+                <strong>
+                  {title}
+                </strong>
+              </h1>
+            </div>
+          </Link>
         )
+
       })}
-    </main>
+    </section>
   )
 }
 
@@ -58,18 +55,19 @@ export const query = graphql`
           id
           fields {
             slug
-          }
-          frontmatter {
+              }
+              frontmatter {
+            title
             projects {
               title
               images {
                 src {
                   childImageSharp {
                     gatsbyImageData(
-                      width: 400
-                      placeholder: BLURRED
-                      formats: [AUTO, WEBP, AVIF]
-                    )
+                width: 400
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+            )
                   }
                 }
               }
@@ -79,5 +77,5 @@ export const query = graphql`
       }
     }
   }
-`
+            `
 export default IndexPage

@@ -8,11 +8,6 @@ thumbnail: img_3537.jpg
 links:
   - https://callummajekohara.com/
 projects:
-  - video: https://vimeo.com/564400531
-    description: A variable typeface made up of multiple individual segments. When
-      on their own, they have little meaning but become something greater,
-      together. An interpretation of the typeface Aileron Black.
-    title: Community Typeface
   - title: The NBA Bubble
     description: Final Major Project, exploring the NBA Bubble which took place in
       the summer of 2020. It takes a look at the issues that surrounded the NBA
@@ -22,6 +17,11 @@ projects:
       - src: nba-bubble-photos5.png
       - src: nba-bubble-photos4.png
       - src: nba-bubble-photos8.png
+  - video: https://vimeo.com/564400531
+    description: A variable typeface made up of multiple individual segments. When
+      on their own, they have little meaning but become something greater,
+      together. An interpretation of the typeface Aileron Black.
+    title: Community Typeface
   - title: "Menopause: Unfiltered"
     description: "A group project with Lucia Bon, Sirine Darwiche and Cicely Scates
       – In response to a brief provided by D and AD and Refinery29, we designed
