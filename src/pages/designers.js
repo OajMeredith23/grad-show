@@ -28,15 +28,15 @@ const IndexPage = ({ data }) => {
         const imgs = node.frontmatter.projects?.map(proj => { return { image: proj.images && proj.images[0].src, title: proj.title } }).flat();
 
         return (
-
-          imgs?.map(({ title, image }, i) => {
-            return (
+          imgs?.map(({ title, image }, j) => {
+            console.log({ image }, title, i)
+            return image && (
               <Link
                 to={node.fields.slug} // Remove trailing slash and convert project title to snake case for URL anchor
-                key={node.id}
+                key={`${node.id}-${i}-${j}`}
               >
                 <GatsbyImage
-                  key={`${node.id}-${i}`}
+                  key={`${node.id}-${j}`}
                   className={styles.image}
                   image={getImage(image)}
                 />
