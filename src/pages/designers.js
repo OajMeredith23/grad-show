@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from './designers.module.sass'
 import _ from 'lodash'
 
-const IndexPage = ({ data }) => {
+const Designers = ({ data }) => {
 
   const designers = data.allMarkdownRemark.edges
 
@@ -20,9 +20,8 @@ const IndexPage = ({ data }) => {
       {_.shuffle(designers).map(({ node }, i) => {
 
         const { title, projects } = node.frontmatter
-        const img = projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
-        const row = Math.round(Math.random() * 3);
-        return (
+        const img = projects && projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
+        return projects && (
           <Link
             to={node.fields.slug}
             key={`${node.id}-${i}`}
@@ -68,7 +67,7 @@ export const query = graphql`
                 src {
                   childImageSharp {
                     gatsbyImageData(
-                width: 400
+                width: 300
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
             )
@@ -82,4 +81,4 @@ export const query = graphql`
     }
   }
             `
-export default IndexPage
+export default Designers
