@@ -14,4 +14,5 @@ introduction: Elliot is an enthusiastic, passionate and mature designer with an
 thumbnail: trading-card-specimen-copy.png
 links:
   - https://www.instagram.com/eprevostdesign/
+  - https://www.elliotprevost.com/
 ---
