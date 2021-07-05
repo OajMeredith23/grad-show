@@ -26,7 +26,7 @@ export default function Posts({ data }) {
   const contentContainer = useRef(null)
   const [lightboxImage, setLightboxImage] = useState(null);
   const post = data.markdownRemark;
-
+  console.log(post.fields.slug.replaceAll('/', ''))
   const {
     title,
     introduction,
@@ -36,6 +36,7 @@ export default function Posts({ data }) {
   } = post.frontmatter
 
 
+  console.log(`../images/identityShapes/${post.fields.slug.replaceAll('/', '')}.png`)
   return (
 
 
@@ -50,7 +51,9 @@ export default function Posts({ data }) {
       <Lightbox image={lightboxImage} close={() => setLightboxImage(null)} />
 
       <header>
-        <div className={styles.icon}></div>
+        <div className={styles.icon}>
+          <img src={`../../identityShapes/${post.fields.slug.replaceAll('/', '')}.png`} alt="" />
+        </div>
         <hgroup>
           <h1><strong>{title}</strong></h1>
           <h2>{course}</h2>
@@ -101,15 +104,6 @@ export default function Posts({ data }) {
 
                   videoTitle="Official Music Video on YouTube"
                 />
-                // <iframe
-                //   src={project.video}
-                //   title={project.title}
-                //   frameBorder="0"
-                //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                //   webKitAllowFullScreen="true"
-                //   mozAllowFullScreen="true"
-                //   allowFullScreen
-                // ></iframe>
               }
 
               {project.images?.map(image => {
@@ -201,6 +195,18 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields{
+        slug
+        # icon { 
+        #   childImageSharp {
+        #             gatsbyImageData(
+        #               width: 1200
+        #               placeholder: BLURRED
+        #               formats: [AUTO, WEBP, AVIF]
+        #       )
+        #     }
+        # }
+      }
       frontmatter {
         title
         introduction

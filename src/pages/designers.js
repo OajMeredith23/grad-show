@@ -7,7 +7,6 @@ import _ from 'lodash'
 const IndexPage = ({ data }) => {
 
   const designers = data.allMarkdownRemark.edges
-  console.log(designers.length)
 
   return (
     <section className={styles.container}>

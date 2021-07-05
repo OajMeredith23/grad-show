@@ -33,6 +33,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
+    createNodeField({
+      node,
+      name: `icon`,
+      value: node.fields.slug.replace(/\//g, ""),
+    })
   }
 }
 
@@ -46,6 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
+              icon
             }
           }
         }
@@ -63,6 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
+        icon: node.fields.icon,
       },
     })
   })

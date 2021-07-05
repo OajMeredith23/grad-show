@@ -50,7 +50,6 @@ const Layout = ({ children, showBgAnimation = true }) => {
 
             <main
                 className={styles.childrenContainer}
-                key={location?.pathname}
             >
                 {children}
             </main>
