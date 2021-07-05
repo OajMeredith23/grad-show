@@ -12,6 +12,7 @@ projects:
     description: Type specimen based on the meme culture and Italian politics.
     images:
       - src: come-oggi-pins.png
+      - src: come-oggi-flag.png
   - title: Noi
     description: A publication on the relation between Italy and Ultras Culture
     video: <iframe width="560" height="315"
