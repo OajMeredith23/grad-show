@@ -7,4 +7,9 @@ introduction: "Ivan is a multidisciplinary designer and Art Director. His
 thumbnail: memento-attimi.png
 links:
   - sassocaivan.cargo.site
+projects:
+  - title: Come Oggi
+    description: Type specimen based on the meme culture and Italian politics.
+    images:
+      - src: come-oggi-pins.png
 ---
