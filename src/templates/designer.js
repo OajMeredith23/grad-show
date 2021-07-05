@@ -10,7 +10,6 @@ import FeatherIcon from 'feather-icons-react';
 import Lightbox from '../components/Lightbox'
 
 const detectWebsite = (url) => {
-  // var url = "http://scratch99.com/web-development/javascript/";
   var domain = url
     .replace("http://", '')
     .replace("https://", '')
@@ -26,7 +25,6 @@ export default function Posts({ data }) {
   const contentContainer = useRef(null)
   const [lightboxImage, setLightboxImage] = useState(null);
   const post = data.markdownRemark;
-  console.log(post.fields.slug.replaceAll('/', ''))
   const {
     title,
     introduction,
@@ -36,7 +34,6 @@ export default function Posts({ data }) {
   } = post.frontmatter
 
 
-  console.log(`../images/identityShapes/${post.fields.slug.replaceAll('/', '')}.png`)
   return (
 
 
