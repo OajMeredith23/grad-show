@@ -1,0 +1,10 @@
+---
+title: Ivan Sasso
+course: Graphic Design
+introduction: "Ivan is a multidisciplinary designer and Art Director. His
+  practice is based upon within the fields of art, culture and commerce: his
+  interests are in editorial, artworks and advertising."
+thumbnail: memento-attimi.png
+links:
+  - sassocaivan.cargo.site
+---
