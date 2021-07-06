@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 import favicon from '../images/icon.png'
 import * as styles from './layout.module.sass'
 
@@ -37,6 +38,7 @@ const Layout = ({ children, showBgAnimation = true }) => {
                 <link rel="icon" href={favicon} />
             </Helmet>
 
+            <Nav />
             {showBgAnimation &&
                 <div className={styles.backgroundAnimation}>
                     <div>
@@ -60,4 +62,39 @@ const Layout = ({ children, showBgAnimation = true }) => {
     )
 }
 
+
+const Nav = () => {
+
+    return (
+        <nav>
+            <Link to="/">
+                <h1>
+                    <strong>
+                        UXGRA
+                    </strong>
+                </h1>
+            </Link>
+            <ul>
+                <li>
+                    <Link to="/about">
+                        <h2>
+                            <strong>
+                                Info
+                            </strong>
+                        </h2>
+                    </Link>
+                </li>
+                <li>
+                    <a href="https://www.ravensbourne.ac.uk/connect/events/graphic-design-uxui-degree-show">
+                        <h2>
+                            <strong>
+                                Get your tickets
+                            </strong>
+                        </h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    )
+}
 export default Layout

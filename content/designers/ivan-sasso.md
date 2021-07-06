@@ -16,10 +16,7 @@ projects:
       - src: come-oggi-flag.png
   - title: Noi
     description: A publication on the relation between Italy and Ultras Culture
-    video: <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/fcfFwQ082c4" title="YouTube video
-      player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    video: https://www.youtube.com/embed/fcfFwQ082c4
     images:
       - src: noi-9.png
 ---

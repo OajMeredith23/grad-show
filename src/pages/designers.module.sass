@@ -7,7 +7,9 @@ $bp: 768px
         --boxSize: calc(33vmin - var(--gap) - .25em)
 
 .container 
-    padding: 1em
+    // padding: 1em
+    padding: var(--containerPadding)
+
     @media(min-width: $bp)
         display: grid 
         height: calc(100vh - 1em)
@@ -39,7 +41,6 @@ $bp: 768px
 .designer
     h1
         padding: 0 1em
-        font-size: 2em
     @media(min-width: $bp)
         display: grid 
         grid-column: span 2 
@@ -60,8 +61,10 @@ $bp: 768px
     grid-column: 1 / -1
     @media(max-width: $bp)
         margin: 1em 0
+        h1 
+            font-size: 1em
     h1 
-        font-size: 1em
+        font-size: 2em
         grid-column: 2
 .imageContainer
     height: 100%

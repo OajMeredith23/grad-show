@@ -37,7 +37,7 @@ export default function Posts({ data }) {
   return (
 
 
-    <main className={styles.container}>
+    <div className={styles.container}>
       <Helmet title={title} defer={false}>
         <title>{title}</title>
         <meta name="description" content={introduction} />
@@ -135,7 +135,7 @@ export default function Posts({ data }) {
           <FeatherIcon icon="arrow-left" size="72" />
         </aside>
       </div>
-    </main>
+    </div>
   )
 }
 
