@@ -7,7 +7,11 @@ const DesignerURLs = ({ data }) => {
     const urls = data.allMarkdownRemark.edges
     console.log(urls)
     return (
-        <ul>
+        <ul
+            style={{
+                marginTop: '5em'
+            }}
+        >
             <h1>
                 total pages: {urls.length}
             </h1>
@@ -18,13 +22,14 @@ const DesignerURLs = ({ data }) => {
                         key={i}
                         style={{ marginBottom: '1em', paddingLeft: '1em' }}
                     >
-                        <CopyToClipboard text={`https://uxgra-degreeshow.com${node.fields.slug}`}>
-                            <>
-                                <h4>{node.frontmatter.title}</h4>
-                                <p>
-                                    https://uxgra-degreeshow.com{node.fields.slug}
-                                </p>
-                            </>
+                        <h4>{node.frontmatter.title}</h4>
+                        <CopyToClipboard
+                            text={`https://uxgra-degreeshow.com${node.fields.slug}`}
+                            onCopy={() => console.log("copied")}
+                        >
+                            <p>
+                                https://uxgra-degreeshow.com{node.fields.slug}
+                            </p>
                         </CopyToClipboard>
                     </li>
                 )
