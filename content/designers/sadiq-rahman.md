@@ -7,7 +7,8 @@ introduction: Sadiq is a great preacher of positive representation and loves
   hobbies and interests, into his creative lifestyle.
 thumbnail: profile.jpg
 links:
-  - https://sadiqrahmanportfolio.cargo.site/ Jusssdesigns
+  - https://sadiqrahmanportfolio.cargo.site
+  - https://instagram.com/jusssdesigns
 projects:
   - title: "'What do you want to be when you grow up' - Magazine."
     description: A magazine aimed at celebrating 'multipotentiality and its
