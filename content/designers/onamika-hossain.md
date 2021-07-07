@@ -6,7 +6,8 @@ introduction: A creative that enjoys using different mediums to communicate
   illustration, branding & photography in print and digital contexts.
 thumbnail: tcfgjn.png
 links:
-  - https://onamikahossain.myportfolio.com         /https://www.instagram.com/xxamiikaxx/
+  - https://onamikahossain.myportfolio.com
+  - /https://www.instagram.com/xxamiikaxx/
 projects:
   - title: "Provoke Typeface Project "
     description: A typeface that plays with stereotypes of feminine type in relation
