@@ -36,4 +36,22 @@ projects:
       - src: le-pink-long.png
       - src: dscn4775.png
       - src: le-blue-long.png
+  - title: Canny Curries
+    description: "Canny Curries is a family recipe and story book designed by Jay
+      Halim Davison.  The book features elements of illustration, considered
+      typography and photography.     The book is focused around Jay’s family
+      history and mixed Bengali, British heritage. Canny Curries follows a
+      journey that Jay’s grandparents took from Newcastle to Bangladesh in a
+      converted ford transit van, with their 5 children in 1969.   The editorial
+      features memories and stories told by Jay’s mother, Rashida and her
+      sisters Anwara, Yasmine and Mimi about their trip to Bangladesh. The book
+      also gives an insight into growing up mixed race, in Newcastle during the
+      60’s and 70’s. Of course it wouldn’t be a recipe book without Rashida’s 10
+      delicious curries, told step by step with tips and advice passed down from
+      her father, Majid. "
+    images:
+      - src: cover.png
+      - src: hard_coaver_a4_book_mockup_6.png
+      - src: hard_cover_a4_book_mockup_6.png
+      - src: hard_cover_a4_bossok_mockup_6.png
 ---
