@@ -33,9 +33,9 @@ projects:
     description: A series of riso printed, COVID posters commissioned by the Globe
       Gallery. Inspired by vintage French health and safety posters.
     images:
-      - src: le-pink-long.png
-      - src: dscn4775.png
-      - src: le-blue-long.png
+      - src: p.png
+      - src: o.png
+      - src: bpng.png
   - title: Canny Curries
     description: "Canny Curries is a family recipe and story book designed by Jay
       Halim Davison.  The book features elements of illustration, considered
