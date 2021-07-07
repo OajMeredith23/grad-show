@@ -28,5 +28,6 @@ projects:
       - src: dsc_9112.jpg
       - src: jadsc_9155.jpg
       - src: dsc_9111.jpg
+    video: https://youtu.be/3rF9p_Nn8jk
   - title: Canny Curries
 ---
