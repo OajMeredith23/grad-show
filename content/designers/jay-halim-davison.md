@@ -23,11 +23,11 @@ projects:
       to generate extrusions that mimic crane-like structures, Shipyard is a
       usable and variable typeface. "
     images:
-      - src: dsc_9170.jpg
-      - src: dsc_9249.jpg
-      - src: dsc_9112.jpg
-      - src: jadsc_9155.jpg
-      - src: dsc_9111.jpg
+      - src: 3copu.jpg
+      - src: 2copy.jpg
+      - src: 4copy.jpg
+      - src: 5copy.jpg
+      - src: 1copy.jpg
     video: https://youtu.be/3rF9p_Nn8jk
   - title: COVID-19 Health and Safety
     description: A series of riso printed, COVID posters commissioned by the Globe
