@@ -3,9 +3,9 @@ title: Jay Halim Davison
 course: Graphic Design
 introduction: Jay Halim is a Graphic Designer living and working in London,
   exploring visual communication through a various range of mediums. Jay has a
-  strong interest working with Editorial, Illustration and Print design. During
-  my free time. In his free time Jay enjoys working on projects that investigate
-  topics surrounding history, identity, politics and race.
+  strong interest working with Editorial, Illustration and Print design. In his
+  free time Jay enjoys working on projects that investigate topics surrounding
+  history, identity, politics and race.
 thumbnail: screenshot-2021-07-07-at-23.01.47.png
 links:
   - https://jayhalimstudio.com/
