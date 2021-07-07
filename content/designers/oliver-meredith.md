@@ -29,6 +29,9 @@ projects:
       - src: d-ad-1-video.003.jpeg
       - src: d-ad-1-video.004.jpeg
     video: https://www.youtube.com/watch?v=KlJpwUF4RzI
+    description: D&AD New Blood Award Winning entry. BBC Evoke is an award-winning
+      speculative design project created in collaboration with Ming-Hong Li,
+      winner of 2021 D&AD New Blood award for the brief set by the BBC.
   - title: Folktiles
     description: "An app and experience that builds upon the most fundamental of
       shared human experiences: storytelling. Folktiles is built using Next.js,
