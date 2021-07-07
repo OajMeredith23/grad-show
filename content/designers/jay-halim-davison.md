@@ -50,8 +50,8 @@ projects:
       delicious curries, told step by step with tips and advice passed down from
       her father, Majid. "
     images:
-      - src: cover.png
-      - src: hard_coaver_a4_book_mockup_6.png
-      - src: hard_cover_a4_book_mockup_6.png
-      - src: hard_cover_a4_bossok_mockup_6.png
+      - src: 1.png
+      - src: 2.png
+      - src: 3.png
+      - src: 4.png
 ---
