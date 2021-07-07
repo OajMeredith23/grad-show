@@ -20,4 +20,7 @@ projects:
     images:
       - src: final-mockup.jpg
       - src: double-mockup.jpg
+  - title: 36DaysOfType
+    video: https://vimeo.com/564625662
+    description: Overview of my submissions for the 36DaysOfType challenge this year.
 ---
