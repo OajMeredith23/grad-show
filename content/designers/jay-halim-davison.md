@@ -4,7 +4,7 @@ course: Graphic Design
 introduction: Jay Halim is a Graphic Designer living and working in London,
   exploring visual communication through a various range of mediums. Jay has a
   strong interest working with Editorial, Illustration and Print design. In his
-  free time Jay enjoys working on projects that investigate topics surrounding
+  free time, Jay enjoys working on projects that investigate topics surrounding
   history, identity, politics and race.
 thumbnail: screenshot-2021-07-07-at-23.01.47.png
 links:
@@ -30,5 +30,10 @@ projects:
       - src: dsc_9111.jpg
     video: https://youtu.be/3rF9p_Nn8jk
   - title: COVID-19 Health and Safety
-    description: "A series of posters "
+    description: A series of riso printed, COVID posters commissioned by the Globe
+      Gallery. Inspired by vintage French health and safety posters.
+    images:
+      - src: le-pink-long.png
+      - src: dscn4775.png
+      - src: le-blue-long.png
 ---
