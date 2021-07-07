@@ -1,53 +1,84 @@
-import React from "react"
+import * as React from "react"
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from './index.module.sass'
-import { styled } from "@material-ui/core"
-import Div100vh from 'react-div-100vh';
-const colors = ['#ffabcd', '#CCE247', '#FE3D2B'];
+import _ from 'lodash'
 
-const IndexPage = () => {
+const Designers = ({ data }) => {
 
-
+  const designers = data.allMarkdownRemark.edges
 
   return (
-    <Div100vh
-      className={styles.container}
-    >
+    <section className={styles.container}>
 
-      <section className={styles.showInfo}>
-        <hgroup>
-          <h1><strong>DEGREE SHOW</strong></h1>
-          <h1>GRAPHIC DESIGN &amp; UX/UI</h1>
-          <h3>
-            8th and 9th July 2021
-          </h3>
-          <h3>
-            Holborn, London
-          </h3>
-        </hgroup>
-      </section>
+      <figure className={styles.landing}>
+        <h1><strong>DEGREE SHOW</strong></h1>
+        <h1>GRAPHIC DESIGN &amp; UX/UI</h1>
 
+        <h4>RAVENSBOURNE UNIVERSITY</h4>
+      </figure>
+      {_.shuffle(designers).map(({ node }, i) => {
 
-      <section className={styles.tickets}>
+        const { title, projects } = node.frontmatter
+        const img = projects && projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
+        return projects && (
+          <Link
+            to={node.fields.slug}
+            key={`${node.id}-${i}`}
+            className={styles.designer}
+          >
+            <div className={styles.content}>
+              <div className={styles.imageContainer}>
+                <GatsbyImage
+                  key={`${node.id}`}
+                  image={getImage(img)}
+                  className={styles.image}
+                />
+              </div>
+              <h1
+              >
+                <strong>
+                  {title}
+                </strong>
+              </h1>
+            </div>
+          </Link>
+        )
 
-        <a href="https://www.ravensbourne.ac.uk/connect/events/graphic-design-uxui-degree-show" className={styles.ticketsBtn}>
-          <h3>GET YOUR TICKETS</h3>
-        </a>
-        <figure className={styles.comingSoon}>
-          <h3>
-            <strong>
-              COMING SOON
-            </strong>
-          </h3>
-          <h3>
-            RAVENSBOURNE UNIVERSITY
-          </h3>
-        </figure>
-      </section>
-
-    </Div100vh>
+      })}
+    </section>
   )
 }
 
-export default IndexPage
+export const query = graphql`
+  query{
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          fields {
+            slug
+              }
+              frontmatter {
+            title
+            projects {
+              title
+              images {
+                src {
+                  childImageSharp {
+                    gatsbyImageData(
+                width: 300
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+            )
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+            `
+export default Designers

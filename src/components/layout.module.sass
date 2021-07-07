@@ -2,9 +2,11 @@
 
 :root 
     --navHeight: 50px
-    --partSize: calc(50vmin - (var(--navHeight) * 2))
-    --containerPadding: calc(var(--navHeight) + 2em) 1em 1em 1em 
-
+    --partSize: calc(50vmin)
+    --containerPadding: calc(var(--navHeight) + 2em) 1em 1em 2em 
+    @media (min-width: 768px)
+        --partSize: calc(50vmin - (var(--navHeight) * 2))
+        
 
 .backgroundAnimation 
     position: fixed
@@ -28,7 +30,7 @@
         max-width:  calc(var(--partSize) * 2)
         max-height: calc(var(--partSize) * 2)
         @media(max-width: 768px)
-            transform: scale(2)
+            transform: scale(3)
     span 
         display: inline-block
         background: var(--partColor)
@@ -57,7 +59,7 @@ nav
     top: 0
     left: 0 
     right: 0
-    z-index: 25
+    z-index: 3
     height: var(--navHeight)
     background: #000
     display: flex 

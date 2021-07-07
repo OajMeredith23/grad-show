@@ -1,6 +1,6 @@
 .lightboxContainer 
     position: fixed
-    z-index: 20
+    z-index: 20 !important
     top: 0 
     left: 0
     right: 0
@@ -11,26 +11,28 @@
 
 .shade 
     position: fixed
-    z-index: 2
+    z-index: 101
     top: 0 
     left: 0
     right: 0
     bottom: 0
     background: rgba(0,0,0,0.9) 
+
 .closeBtn 
     background: transparent 
     border: none 
     color: white 
     padding: 0.5em
     position: absolute
-    z-index: 21
+    z-index: 200
     top: .5em 
     right: 1em
     cursor: pointer
 
+
 .lightboxImage 
     position: relative
-    z-index: 21
+    z-index: 200
     height: 90vh 
     padding: 2em
     img, picture 

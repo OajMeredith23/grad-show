@@ -25,8 +25,10 @@ const Layout = ({ children, showBgAnimation = true }) => {
             setBackgroundPartToMove(Math.round(Math.random() * 4))
         }, 500);
 
+
         return () => clearInterval(pickRandomBackgroundPartToMove);
     }, []);
+
     return (
         <div>
 
@@ -39,11 +41,12 @@ const Layout = ({ children, showBgAnimation = true }) => {
             </Helmet>
 
             <Nav />
+
             {showBgAnimation &&
                 <div className={styles.backgroundAnimation}>
                     <div>
                         {[0, 1, 2, 3].map((part, i) => <span style={{
-                            transform: `rotate(${i === backgroundPartToMove && angles[Math.floor(Math.random() * angles.length - 1)]}deg)`,
+                            transform: `rotate(${i === backgroundPartToMove && angles[backgroundPartToMove]}deg)`,
                             background: randomColor
                         }}></span>)}
                     </div>
