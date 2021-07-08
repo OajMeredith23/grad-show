@@ -18,14 +18,23 @@ projects:
     title: Youfluence
     images:
       - src: fmpfinalphotos5.png
+      - src: fimpfinalphotos3.jpg
+      - src: fmpfinalphotos1.png
+      - src: img_7748good.png
   - title: "Dissertation book "
     description: Interviews with graphic designers on their journeys into the design
       industry & advice for current students
     images:
-      - src: img_7835e.jpg
+      - src: dissomockcover1-copy.jpg
+      - src: dissomock2-copy.jpg
+      - src: dissobook3-copy.jpg
     video: https://vimeo.com/570205015
   - title: "Time & Music "
     description: Experimental motion graphics series in relation to time and music
     images:
-      - src: screenshot-2021-07-02-at-09.38.27.png
+      - src: screenshot-2021-07-02-at-09.38.27-copy.jpg
+      - src: screenshot-2021-07-08-at-00.46.37-copy.jpg
+      - src: screenshot-2021-07-08-at-00.43.53-copy.jpg
+      - src: screenshot-2021-07-08-at-00.43.25-copy.jpg
+    video: https://vimeo.com/572339804
 ---
