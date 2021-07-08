@@ -25,8 +25,7 @@ projects:
     description: This project explores the philosophical concepts of Mind-Body
       Dualism and the Extended Mind Thesis. By using the platform, your mind is
       extended onto the website.
-    images:
-      - src: mind.png
+    images: []
     video: https://vimeo.com/564700287
   - images:
       - src: fragileegos.png
