@@ -28,7 +28,8 @@ projects:
     images: []
     video: https://vimeo.com/564700287
   - images:
-      - src: fragileegos.png
+      - src: 830fe3c0-de49-482f-a0e6-1fd11f96a32a_rw_3840.png
+      - src: f366cda0-9f44-468c-95fc-52a83ff13ce0_rw_3840.png
     title: "I am Angry: The Fragile Egos of Men"
     description: "This booklet was based on the concept of fragile masculinity, and
       the patriarchy's role in society's gender norms. I chose to name this
