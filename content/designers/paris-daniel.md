@@ -6,7 +6,7 @@ introduction: Paris has great enthusiasm for design and an interest in
   near future.  Her interest is in creating bright and colourful designs in
   which she is open to specialisms such as packaging, motion and editorial
   design.
-thumbnail: fmpfinalphotos5.png
+thumbnail: newcoverimage.jpg
 links:
   - https://www.linkedin.com/in/paris-daniel-b07703142/
   - https://www.behance.net/parisdaniel
@@ -17,10 +17,10 @@ projects:
       cult like following and an obsession with financial gain
     title: Youfluence
     images:
-      - src: fmpfinalphotos5.png
-      - src: fimpfinalphotos3.jpg
-      - src: fmpfinalphotos1.png
-      - src: img_7748good.png
+      - src: fmpfinalphotos5-copy.jpg
+      - src: fimpfinalphotos3-copy.jpg
+      - src: img_7748good-copy.jpg
+      - src: fmpfinalphotos1-copy.jpg
   - title: "Dissertation book "
     description: Interviews with graphic designers on their journeys into the design
       industry & advice for current students
