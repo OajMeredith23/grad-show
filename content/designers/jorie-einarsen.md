@@ -15,5 +15,5 @@ introduction: Jorie is a London based multidisciplinary designer from Sweden's
 thumbnail: jorie-einarsen.png
 links:
   - https://joriein.com/
-  - https://www.instagram.com/joriein/
+  - https://www.instagram.com/byjoriein/
 ---
