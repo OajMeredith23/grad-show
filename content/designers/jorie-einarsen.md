@@ -38,7 +38,7 @@ projects:
       this project produced 197.6 grams of extracted inks from 299 discarded
       RISO masters.
     images:
-      - src: riso_exp.jpg
+      - src: riso_exp_front_2.png
       - src: riso_exp_lam_1.jpg
   - title: Where's Brian?
     description: "A printed editorial mini-book that juxtaposes a part of Eve
