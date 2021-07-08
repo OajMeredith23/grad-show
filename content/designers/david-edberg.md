@@ -3,7 +3,7 @@ title: David Edberg
 course: Graphic Design
 introduction: "David Edberg is a multidisciplinary designer that particularly
   enjoy motion design, data visualisation and branding. "
-thumbnail: david-edberg.png
+thumbnail: fmp-pics6.jpg
 links:
   - https://www.instagram.com/edbergdesign/
   - https://dedb.myportfolio.com/
@@ -24,6 +24,7 @@ projects:
       - src: fmp-pics19.png
       - src: fmp-pics20.png
       - src: fmp-pics21.png
+      - src: fmp-pics6.jpg
   - title: Futureproofing a Graphic Designer
     description: "I chose to write my dissertation about what Graphic Designers can
       do to futureproof themselves in an ever-changing global economy. I
