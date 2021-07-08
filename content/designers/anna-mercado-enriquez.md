@@ -37,4 +37,10 @@ projects:
     description: Zine posters that celebrate female punk musicians from the 70s
       during their live performances & give an insight of the challenging
       atmosphere that revolved around them.
+  - title: Golden Climate Change
+    description: This piece is intended to represent the impact of climate change
+      while time is melting the nature on planet Earth. It is also shaped into
+      the golden ratio embodying the origins of organic life.
+    images:
+      - src: 5a847d0f-764a-4b1c-899b-bd1f1463c07d.jpeg
 ---
