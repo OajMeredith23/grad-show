@@ -11,7 +11,7 @@ introduction: Max is a multidisciplinary graphic designer based in London who is
 thumbnail: stonewall-mockup.png
 links:
   - https://maxgraphicdesign.com
-  - https://www.instagram.com/maxcygnaeus/
+  - https://www.instagram.com/maxcygnaeusdesign/
   - https://www.linkedin.com/in/maxcygnaeus/
 projects:
   - title: Stonewall Variable Typeface
