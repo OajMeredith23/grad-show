@@ -17,35 +17,35 @@ const Designers = ({ data }) => {
 
         <h4>RAVENSBOURNE UNIVERSITY</h4>
       </figure>
-      {_.shuffle(designers).map(({ node }, i) => {
+      {
+        designers.map(({ node }, i) => {
 
-        const { title, projects } = node.frontmatter
-        const img = projects && projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
-        return projects && (
-          <Link
-            to={node.fields.slug}
-            key={`${node.id}-${i}`}
-            className={styles.designer}
-          >
-            <div className={styles.content}>
-              <div className={styles.imageContainer}>
-                <GatsbyImage
-                  key={`${node.id}`}
-                  image={getImage(img)}
-                  className={styles.image}
-                />
+          const { title, projects } = node.frontmatter
+          const img = projects && projects[0]?.images?.length > 0 && projects[0]?.images[0]?.src
+          return projects && (
+            <Link
+              to={node.fields.slug}
+              key={`${node.id}-${i}`}
+              className={styles.designer}
+            >
+              <div className={styles.content}>
+                <div className={styles.imageContainer}>
+                  <GatsbyImage
+                    key={`${node.id}`}
+                    image={getImage(img)}
+                    className={styles.image}
+                  />
+                </div>
+                <h1>
+                  <strong>
+                    {title}
+                  </strong>
+                </h1>
               </div>
-              <h1
-              >
-                <strong>
-                  {title}
-                </strong>
-              </h1>
-            </div>
-          </Link>
-        )
+            </Link>
+          )
 
-      })}
+        })}
     </section>
   )
 }

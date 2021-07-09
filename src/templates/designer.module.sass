@@ -8,6 +8,7 @@
     padding: var(--containerPadding)
     display: grid 
     grid-gap: var(--spacing)
+    background: var(--background)
     @media(min-width: 768px)
         height: 100vh
         grid-template-columns: repeat(12, 1fr) 
@@ -60,7 +61,7 @@
         grid-column: span 2
 
 .links 
-    margin-top: var(--spacing)
+    margin-top: 2em
 .projectInfo
     grid-column: 1 / -1
     @media(min-width: 768px)
@@ -73,14 +74,14 @@
         width: 100%
         height: 100%
     @media screen and ( min-width: 768px )
-        grid-column: span 5
+        grid-column: span 4
         
 
 .projectImage
     grid-column: 1 / -1
     cursor: zoom-in
     @media(min-width: 768px)
-        grid-column: span 5
+        grid-column: span 4
     
     // img, picture 
     //     object-fit: contain !important
